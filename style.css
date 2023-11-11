@@ -128,12 +128,13 @@ body {
     .image img {
         position: relative;
         left: 100px;
+        top: 20px;
         }
 
     .wlcm {
         font-size: 14px;
         margin-bottom: 0;
-        margin-top: 20px;
+        margin-top:32px;
     }
 
     .wlcm2 {
