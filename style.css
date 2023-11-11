@@ -120,6 +120,65 @@ body {
 
 /* Interactivity */
 
+@media (max-width: 420px) {
+    .card {
+        height: 73%;
+        width: 80%;
+    }
+    .image img {
+        position: relative;
+        left: 100px;
+        }
+
+    .wlcm {
+        font-size: 14px;
+        margin-bottom: 0;
+        margin-top: 20px;
+    }
+
+    .wlcm2 {
+        margin-top: 4px;
+        font-size: 14px;
+    }
+
+    .githublogin {
+        font-size: 12px;
+
+    }
+
+    .githublogin img {
+        height: 15px;
+        width: 15px;
+    }
+
+    .spantext {
+        font-size: 13px;
+    }
+
+    .inputdet {
+        color: rgba(0, 0, 0, 0.558);
+    }
+
+    .inputdet2 {
+        color: rgba(0, 0, 0, 0.568);
+    }
+
+    .frgtpwd {
+        margin-top: 25px;
+        color: rgb(255, 89, 0);
+        font-weight: bold;
+        padding-left: 20px;
+        font-size: 14px;
+    }
+
+    .continue {
+        position: relative;
+        top: -30px;
+
+    }
+
+}
+
 /* Keyframes and animations */
 
 @keyframes slidein {
