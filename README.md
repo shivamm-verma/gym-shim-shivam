@@ -1,10 +1,10 @@
-# version-control-demo
-This is demo repo for Studying Version Control- using Git &amp; Github.
+# Sharing purpose
+This is demo repo for Studying and sharing about any code.
 
 
-# Using thi repo as Tutorial Repo- only.
-Myself, Shivam Verma.
+# Who Am I?
+Myself, Shivam Verma.👍🏼
 
-# College& study
-MSIT, New Delhi. - B.Tech CSE - for the batch 2023-27
+# USED FOR??
+Interactive sharing of codes to friends to look at This.
 
