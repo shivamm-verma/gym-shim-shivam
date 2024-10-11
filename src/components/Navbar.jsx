@@ -118,7 +118,7 @@ function Navbar() {
           {isAuthenticated ? (
             <button
               type="button"
-              class="rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              class="rounded-md border px-3 py-2 text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black bg-red-600 text-white border-red-700"
               onClick={(e) =>
                 logout({ logoutParams: { returnTo: window.location.origin } })
               }
@@ -128,7 +128,7 @@ function Navbar() {
           ) : (
             <button
               type="button"
-              class="rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              class="rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black bg-blue-600 text-white border-blue-700"
               onClick={(e) => loginWithRedirect()}
             >
               Log In
@@ -258,7 +258,7 @@ function Navbar() {
 
       {/* Profile */}
       {/* show only when user Authenticated */}
-      {isAuthenticated ? (
+      {isAuthenticated &&(
         <div className="text-center mx-auto border-black border w-fit px-4 py-2 rounded-md shadow-lg">
           <h1 className="m-0 font-semibold font-serif text-4xl">Profile</h1>
           {isAuthenticated && (
@@ -275,9 +275,6 @@ function Navbar() {
           )}
           {/* end of tag. */}
         </div>
-      ) : (
-        <></>
-        // nothing passing
       )}
       <br />
       <br />
