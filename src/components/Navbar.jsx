@@ -2,10 +2,15 @@ import { useAuth0 } from "@auth0/auth0-react";
 import React from "react";
 
 function Navbar() {
-  const { user, loginWithRedirect, logout, isAuthenticated } = useAuth0();
+  const { user, loginWithRedirect, logout, isAuthenticated, isLoading } =
+    useAuth0();
+
+  if (isLoading) {
+    return <div>Loading ...</div>;
+  }
 
   //   FOR WORKING ONLY
-  console.log("Current User Details: ", user);
+  // console.log("Current User Details: ", user);
 
   return (
     <div class="relative w-full bg-white">
@@ -114,7 +119,9 @@ function Navbar() {
             <button
               type="button"
               class="rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-              onClick={(e) => loginWithRedirect()}
+              onClick={(e) =>
+                logout({ logoutParams: { returnTo: window.location.origin } })
+              }
             >
               Log Out
             </button>
@@ -248,8 +255,41 @@ function Navbar() {
         </div>
       )}
       <br />
+
+      {/* Profile */}
+      {/* show only when user Authenticated */}
+      {isAuthenticated ? (
+        <div className="text-center mx-auto border-black border w-fit px-4 py-2 rounded-md shadow-lg">
+          <h1 className="m-0 font-semibold font-serif text-4xl">Profile</h1>
+          {isAuthenticated && (
+            <div className=" flex flex-row justify-center align-middle items-center gap-2">
+              <img className="my-2" src={user.picture} alt={user.name} />
+              <div>
+                <h2 className="font-semibold">Your Name: {user.name}</h2>
+                <p className="font-semibold">Your Mail: {user.email}</p>
+                {/* <p className="font-semibold">
+                  Verified Mail?: {user.email_verified}
+                </p> */}
+              </div>
+            </div>
+          )}
+          {/* end of tag. */}
+        </div>
+      ) : (
+        <></>
+        // nothing passing
+      )}
+      <br />
+      <br />
+
+
+      {/*  */}
+      {/*  */}
+      {/* end of Final tag. */}
     </div>
   );
 }
 
 export default Navbar;
+
+
